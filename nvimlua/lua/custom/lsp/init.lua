@@ -272,8 +272,6 @@ return {
 
 			servers.lemminx = {}
 
-			servers.clangd = {}
-
 			servers.html = {}
 
 			servers.cssls = {}
@@ -304,6 +302,10 @@ return {
 			-- }
 
 			servers.terraformls = {}
+
+
+			-- Clangd managed independantly, let Nix Shell or host system handle the install of clangd
+			vim.lsp.enable("clangd")
 
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
